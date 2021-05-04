@@ -16,13 +16,13 @@ import { ProdutosComponent } from './produtos/produtos.component';
   declarations: [
     AppComponent,
     LoginComponent,
-    CadastrarComponent
+    CadastrarComponent,
     ComprasComponent,
     MenuComponent,
-    RodapeComponent
-    LojaComponent
-    ComprasComponent
-    ProdutosComponent
+    RodapeComponent,
+    LojaComponent,
+    ComprasComponent,
+    ProdutosComponent,
   ],
   imports: [
     BrowserModule,
