@@ -17,16 +17,15 @@ import { ProdutosComponent } from './produtos/produtos.component';
   declarations: [
     AppComponent,
 
-    InicioComponent
+    InicioComponent,
     LoginComponent,
-    CadastrarComponent
+    CadastrarComponent,
     ComprasComponent,
     MenuComponent,
     RodapeComponent,
     LojaComponent,
     ComprasComponent,
     ProdutosComponent
-
   ],
   imports: [
     BrowserModule,
