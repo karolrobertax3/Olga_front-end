@@ -98,32 +98,32 @@
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="nome">Nome</label>
-        <input type="nome" class="form-control" id="nome" placeholder="Nome completo">
+        <input [(ngModel)]='usuario.nomeRazaoSocial' type="nome" class="form-control" id="nome" placeholder="Nome completo">
       </div>
       <div class="form-group col-md-6">
         <label for="cpf">CPF</label>
-        <input type="cpf" class="form-control" id="cpf" placeholder="CPF">
+        <input [(ngModel)]='usuario.cpfCnpj' type="cpf" class="form-control" id="cpf" placeholder="CPF">
       </div>
       <div class="form-group col-md-6">
         <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="Email">
+        <input [(ngModel)]='usuario.email' type="email" class="form-control" id="email" placeholder="Email">
       </div>
       <div class="form-group col-md-6">
         <label for="senha">Senha</label>
-        <input type="password" class="form-control" id="senha" placeholder="Senha">
+        <input (input)='confirmSenha($event)' type="password" class="form-control" id="senha" placeholder="Senha">
       </div>
       <div class="form-group col-md-6">
         <label for="confirmaSenha">Confirmar Senha</label>
-        <input type="password" class="form-control" id="confirmaSenha" placeholder="Confirme sua senha">
+        <input [(ngModel)]='usuario.senha' type="password" class="form-control" id="confirmaSenha" placeholder="Confirme sua senha">
       </div>
     </div>
     <div class="form-group">
       <label for="endereco">Endereço</label>
-      <input type="text" class="form-control" id="endereco" placeholder="Informe seu endereço">
+      <input [(ngModel)]='usuario.endereco' type="text" class="form-control" id="endereco" placeholder="Informe seu endereço">
     </div>
     <div class="form-group">
       <label for="telefone">Telefone</label>
-      <input type="text" class="form-control" id="telefone" placeholder=" Informe seu telefone ">
+      <input [(ngModel)]='usuario.telefone' type="text" class="form-control" id="telefone" placeholder=" Informe seu telefone ">
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
@@ -139,7 +139,7 @@
       </div>
       <div class="form-group col-md-2">
         <label for="cep">CEP</label>
-        <input type="text" class="form-control" id="cep">
+        <input [ngModel]='usuario.endereco' type="text" class="form-control" id="cep">
       </div>
     </div>
     <div class="form-group">
