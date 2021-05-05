@@ -1,44 +1,45 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
   <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      
+
       <li class="nav-item">
-          <img src="https://i.imgur.com/shgitts.png" alt="Imagem do user" width="200" height="200" class="img-fluid">
+        <img src="https://i.imgur.com/shgitts.png" alt="Imagem do user" width="200" height="200" class="img-fluid">
       </li>
       <!--<form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
         </form>-->
-      
-      
+
+
       <ul class="navbar-nav ml-auto d-flex align-items-center">
-          <li class="nav-item pl-3">
-              <a class="m-0 font-weight-bold text-success fs-16">Início</a>         
-          </li> 
+        <li class="nav-item pl-3">
+          <a class="m-0 font-weight-bold text-success fs-16">Início</a>
+        </li>
 
       </ul>
 
       <ul class="navbar-nav ml-auto d-flex align-items-center">
-          <li class="nav-item pl-3">
-              <a class="m-0 font-weight-bold text-success fs-16">Apoiar</a>         
-          </li> 
+        <li class="nav-item pl-3">
+          <a class="m-0 font-weight-bold text-success fs-16">Apoiar</a>
+        </li>
 
       </ul>
 
       <ul class="navbar-nav ml-auto d-flex align-items-center">
-          <li class="nav-item pl-3">
-              <a class="m-0 font-weight-bold text-success fs-16">Lojas</a>         
-          </li> 
+        <li class="nav-item pl-3">
+          <a class="m-0 font-weight-bold text-success fs-16">Lojas</a>
+        </li>
 
       </ul>
 
       <ul class="navbar-nav ml-auto d-flex align-items-center">
-          <li class="nav-item pl-3">
-              <a class="m-0 font-weight-bold text-success fs-16">Categorias</a>         
-          </li> 
+        <li class="nav-item pl-3">
+          <a class="m-0 font-weight-bold text-success fs-16">Categorias</a>
+        </li>
 
       </ul>
 
@@ -69,149 +70,147 @@
       <label class="font-weight-bold" for="tipo">Tipo de Pessoa: </label>
       <br>
       <div class="fisica">
-        <label  for="pessoaFisica">Pessoa Física</label>
-      <input type="radio" class="" name="tipoPessoa" id="">
+        <label for="pessoaFisica">Pessoa Física</label>
+        <input type="radio" class="" name="tipoPessoa" id="">
       </div>
       <div class="juridica">
         <label for="pessoaJuridica">Pessoa Jurídica</label>
-      <input type="radio" name="tipoPessoa" id="" checked>
-      </div> 
+        <input type="radio" name="tipoPessoa" id="" checked>
+      </div>
     </div>
-<h3>Criar Conta</h3>
+    <h3>Criar Conta</h3>
     <!-- Botão para acionar modal -->
-<button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#ModalLongoExemplo">
-  Clique aqui para criar conta
-</button>
+    <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#ModalLongoExemplo">
+      Clique aqui para criar conta
+    </button>
 
-<!-- Modal -->
-<div class="modal fade" id="ModalLongoExemplo" tabindex="-1" role="dialog" aria-labelledby="TituloModalLongoExemplo" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="TituloModalLongoExemplo">Tipo de Pessoa</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <!--CADASTRO DE PESSOA FÍSICA-->
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="nome">Nome</label>
-        <input [(ngModel)]='usuario.nomeRazaoSocial' type="nome" class="form-control" id="nome" placeholder="Nome completo">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="cpf">CPF</label>
-        <input [(ngModel)]='usuario.cpfCnpj' type="cpf" class="form-control" id="cpf" placeholder="CPF">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="email">Email</label>
-        <input [(ngModel)]='usuario.email' type="email" class="form-control" id="email" placeholder="Email">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="senha">Senha</label>
-        <input (input)='confirmSenha($event)' type="password" class="form-control" id="senha" placeholder="Senha">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="confirmaSenha">Confirmar Senha</label>
-        <input [(ngModel)]='usuario.senha' type="password" class="form-control" id="confirmaSenha" placeholder="Confirme sua senha">
+    <!-- Modal -->
+    <div class="modal fade" id="ModalLongoExemplo" tabindex="-1" role="dialog" aria-labelledby="TituloModalLongoExemplo"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="TituloModalLongoExemplo">Tipo de Pessoa</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!--CADASTRO DE PESSOA FÍSICA-->
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="nome">Nome</label>
+                <input [(ngModel)]='usuario.nomeRazaoSocial' type="nome" class="form-control" id="nome"
+                  placeholder="Nome completo">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="cpf">CPF</label>
+                <label for="cnpj">CNPF</label>
+                <input [(ngModel)]='usuario.cpfCnpj' type="cpf" class="form-control" id="cpf">
+              </div>
+              <div class="form-group col-md-12">
+                <label for="foto">Foto</label>
+                <input [(ngModel)]='usuario.foto' type="foto" class="form-control" id="foto"
+                  placeholder="Insira o link da sua foto de perfil">
+              </div>
+              <div class="form-group col-md-12">
+                <label for="cpf">Foto da Loja</label>
+                <input [(ngModel)]='usuario.fotoLoja' type="fotoLoja" class="form-control" id="fotoLoja"
+                  placeholder="Insira o link da foto para sua loja">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="email">Email</label>
+                <input [(ngModel)]='usuario.email' type="email" class="form-control" id="email" placeholder="Email">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="senha">Senha</label>
+                <input (input)='confirmSenha($event)' type="password" class="form-control" id="senha"
+                  placeholder="Senha">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="confirmaSenha">Confirmar Senha</label>
+                <input [(ngModel)]='usuario.senha' type="password" class="form-control" id="confirmaSenha"
+                  placeholder="Confirme sua senha">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="endereco">Endereço</label>
+              <input [(ngModel)]='usuario.endereco' type="text" class="form-control" id="endereco"
+                placeholder="Informe seu endereço">
+            </div>
+            <div class="form-group">
+              <label for="endereco">Número</label>
+              <input [(ngModel)]='usuario.numero' type="text" class="form-control" id="numero"
+                placeholder="Informe o número da casa">
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="cidade">Cidade</label>
+                <input [(ngModel)]='usuario.cidade' type="text" class="form-control" id="cidade">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="uf">Estado</label>
+                <select id="uf" name="uf" class="form-control" (change)='estadoCadastro($event)'>
+                  <option selected>Escolher...</option>
+                  <option value="AC">AC</option>
+                  <option value="AL">AL</option>
+                  <option value="AP">AP</option>
+                  <option value="AM">AM</option>
+                  <option value="BA">BA</option>
+                  <option value="CE">CE</option>
+                  <option value="DF">DF</option>
+                  <option value="ES">ES</option>
+                  <option value="GO">GO</option>
+                  <option value="MA">MA</option>
+                  <option value="MT">MT</option>
+                  <option value="MS">MS</option>
+                  <option value="MG">MG</option>
+                  <option value="PA">PA</option>
+                  <option value="PB">PB</option>
+                  <option value="PR">PR</option>
+                  <option value="PE">PE</option>
+                  <option value="PI">PI</option>
+                  <option value="RJ">RJ</option>
+                  <option value="RN">RN</option>
+                  <option value="RS">RS</option>
+                  <option value="RO">RO</option>
+                  <option value="RR">RR</option>
+                  <option value="SC">SC</option>
+                  <option value="SP">SP</option>
+                  <option value="SE">SE</option>
+                  <option value="TO">TO</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="cep">CEP</label>
+                <input [(ngModel)]='usuario.cep' type="text" class="form-control" id="cep">
+              </div>
+              <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input [(ngModel)]='usuario.telefone' type="text" class="form-control" id="telefone"
+                  placeholder=" Informe seu telefone ">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+          </div>
+          <!--<button type="submit" class="btn btn-success">Cadastrar</button>-->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-success" (click)='cadastrar()'>Cadastrar</button>
+        </div>
       </div>
     </div>
-    <div class="form-group">
-      <label for="endereco">Endereço</label>
-      <input [(ngModel)]='usuario.endereco' type="text" class="form-control" id="endereco" placeholder="Informe seu endereço">
-    </div>
-    <div class="form-group">
-      <label for="telefone">Telefone</label>
-      <input [(ngModel)]='usuario.telefone' type="text" class="form-control" id="telefone" placeholder=" Informe seu telefone ">
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="cidade">Cidade</label>
-        <input type="text" class="form-control" id="cidade">
-      </div>
-      <div class="form-group col-md-4">
-        <label for="estado">Estado</label>
-        <select id="estado" class="form-control">
-          <option selected>Escolher...</option>
-          <option>São Paulo</option>
-        </select>
-      </div>
-      <div class="form-group col-md-2">
-        <label for="cep">CEP</label>
-        <input [ngModel]='usuario.endereco' type="text" class="form-control" id="cep">
-      </div>
-    </div>
-    <div class="form-group">
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="email">Razão Social</label>
-        <input type="email" class="form-control" id="email" placeholder="Razão Social">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="cnpj">CNPJ</label>
-        <input type="cnpj" class="form-control" id="cnpj" placeholder="CNPJ">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="Email">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="senha">Senha</label>
-        <input type="password" class="form-control" id="senha" placeholder="Senha">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="confirmaSenha">Confirmar Senha</label>
-        <input type="password" class="form-control" id="confirmaSenha" placeholder="Confirme sua senha">
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="endereco">Endereço</label>
-      <input type="text" class="form-control" id="endereco" placeholder="Informe seu endereço">
-    </div>
-    <div class="form-group">
-      <label for="telefone">Telefone</label>
-      <input type="text" class="form-control" id="telefone" placeholder=" Informe seu telefone ">
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="cidade">Cidade</label>
-        <input type="text" class="form-control" id="cidade">
-      </div>
-      <div class="form-group col-md-4">
-        <label for="inputEstado">Estado</label>
-        <select id="inputEstado" class="form-control">
-          <option selected>Escolher...</option>
-          <option>...</option>
-        </select>
-      </div>
-      <div class="form-group col-md-2">
-        <label for="cep">CEP</label>
-        <input type="text" class="form-control" id="cep">
-      </div>
-    </div>
-    <div class="form-group">
-    </div>
-    <!--<button type="submit" class="btn btn-success">Cadastrar</button>-->
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-success">Cadastrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 
   </form>
-<!--CADASTRO DE PESSOA JURÍDICA-->
-  
-  
+  <!--CADASTRO DE PESSOA JURÍDICA-->
 
 
 
-  
+
+
+
 
 </div>
 

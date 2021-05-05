@@ -12,6 +12,7 @@ export class CadastrarComponent implements OnInit {
 
   usuario: Usuario = new Usuario()
   confirmarSenha: string
+  estado: string
 
   constructor(
     private authService: AuthService,
@@ -23,10 +24,15 @@ export class CadastrarComponent implements OnInit {
   }
 
   confirmSenha(event: any) {
-    this.confirmarSenha = event.traget.value
+    this.confirmarSenha = event.target.value
+  }
+
+  estadoCadastro(event: any){
+    this.estado = event.target.value
   }
 
   cadastrar() {
+    this.usuario.uf = this.estado
     if(this.usuario.senha != this.confirmarSenha) {
       alert("As senhas não coincidem.")
     } else {
@@ -37,5 +43,6 @@ export class CadastrarComponent implements OnInit {
       })
     }
   }
+
 
 }
