@@ -6,8 +6,6 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { InicioComponent } from './inicio/inicio.component';
-import { LoginComponent } from './login/login.component';
-import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { LojaComponent } from './loja/loja.component';
 import { ComprasComponent } from './compras/compras.component';
 import { MenuComponent } from './menu/menu.component';
@@ -20,8 +18,6 @@ import { ProdutosComponent } from './produtos/produtos.component';
     AppComponent,
 
     InicioComponent,
-    LoginComponent,
-    CadastrarComponent,
     ComprasComponent,
     MenuComponent,
     RodapeComponent,
