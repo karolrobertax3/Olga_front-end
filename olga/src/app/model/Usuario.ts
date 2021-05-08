@@ -7,6 +7,10 @@ export class Usuario {
     public email: string
     public telefone: string
     public endereco: string
+    public numero: string
+    public cidade: string
+    public uf: string
+    public cep: string
     public senha: string
     public foto: string
     public fotoLoja: string
