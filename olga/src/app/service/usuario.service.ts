@@ -20,6 +20,9 @@ usuario : Usuario = new Usuario
     headers: new HttpHeaders({'Authorization': environment.token, 'Content-Type':'application/json'})
   }
   
+  getAllProdutos(): Observable<Produtos[]>{
+    return this.http.get<Produtos[]>('http://localhost:8080/produtos', this.token)
+  }
 
   getAllProdutores():Observable<Usuario>{
     return this.http.get<Usuario>('http://localhost:8080/usuarios/nome',this.token)
