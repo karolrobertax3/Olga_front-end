@@ -7,3 +7,4 @@ export class UsuarioLogin {
     public fotoLoja: string
     public token: string
 }
+
