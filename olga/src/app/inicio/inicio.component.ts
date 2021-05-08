@@ -50,20 +50,21 @@ export class InicioComponent implements OnInit {
   entrar(){
     this.authService.entrar(this.usuarioLogin).subscribe((resp: UsuarioLogin) => {
       this.usuarioLogin = resp
-
+      environment.idUsuario = this.usuarioLogin.idUsuario
       environment.token = this.usuarioLogin.token
       environment.foto = this.usuarioLogin.foto
       environment.nome = this.usuarioLogin.nome
       environment.email = this.usuarioLogin.email
       environment.fotoLoja = this.usuarioLogin.fotoLoja
 
+      console.log(environment.idUsuario)
       console.log(environment.token)
       console.log(environment.nome)
       console.log(environment.foto)
       console.log(environment.fotoLoja)
       console.log(environment.email)
 
-      this.router.navigate(['/loja'])
+      this.router.navigate(['/compras'])
 
     }, erro => {
       if(erro.status == 500) {
