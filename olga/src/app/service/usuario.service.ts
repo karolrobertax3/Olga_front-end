@@ -24,6 +24,14 @@ usuario : Usuario = new Usuario
     return this.http.get<Produtos[]>('http://localhost:8080/produtos', this.token)
   }
 
+  getOrganicos(): Observable<Produtos[]>{
+    return this.http.get<Produtos[]>('http://localhost:8080/produtos/organicos?organicos=true', this.token)
+  }
+  /*tentativa de fazer com parametros não está funcionando*/
+  getByNomeProduto(titulo: string): Observable<Produtos>{
+    return this.http.get<Produtos>(`http://localhost:8080/produtos/nome/produto?titulo=${titulo}`, this.token)
+  }
+
   getAllProdutores():Observable<Usuario>{
     return this.http.get<Usuario>('http://localhost:8080/usuarios/nome',this.token)
 

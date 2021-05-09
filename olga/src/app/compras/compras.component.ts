@@ -14,6 +14,7 @@ export class ComprasComponent implements OnInit {
   organico : boolean 
   idUser = environment.idUsuario
   listaProdutos: Produtos[]
+  titulo: string
 
   constructor(
     private router: Router,
@@ -31,6 +32,18 @@ export class ComprasComponent implements OnInit {
   findAllProdutos(){
     this.usuarioService.getAllProdutos().subscribe((resp: Produtos[]) =>{
       this.listaProdutos = resp
+    })
+  }
+
+  findOrganicos(){
+    this.usuarioService.getOrganicos().subscribe((resp: Produtos[]) =>{
+      this.listaProdutos = resp
+    })
+  }
+/*tentativa de fazer com parametros ainda não está funcionando*/
+  findByTitulo(){
+    this.usuarioService.getByNomeProduto(this.titulo).subscribe((resp: Produtos) =>{
+      this.produto = resp
     })
   }
 
