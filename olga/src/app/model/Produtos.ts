@@ -6,7 +6,7 @@ export class Produtos {
     public titulo: string
     public descricao :string
     public fotoProduto :string
-    public organico: boolean
+    public organico: Boolean
     public qtdEstoque: number
     public ativo: boolean
     public qtdCompras: number
