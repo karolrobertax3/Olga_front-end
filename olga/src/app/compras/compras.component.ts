@@ -13,6 +13,8 @@ export class ComprasComponent implements OnInit {
   produto : Produtos = new Produtos
   organico : boolean 
   idUser = environment.idUsuario
+  listaProdutos: Produtos[]
+  titulo: string
 
   constructor(
     private router: Router,
@@ -24,6 +26,25 @@ export class ComprasComponent implements OnInit {
       this.router.navigate(['/inicio'])
       alert('Sua sessão expirou. Faça o login novamente!')
     }
+    this.findAllProdutos()
+  }
+
+  findAllProdutos(){
+    this.usuarioService.getAllProdutos().subscribe((resp: Produtos[]) =>{
+      this.listaProdutos = resp
+    })
+  }
+
+  findOrganicos(){
+    this.usuarioService.getOrganicos().subscribe((resp: Produtos[]) =>{
+      this.listaProdutos = resp
+    })
+  }
+/*tentativa de fazer com parametros ainda não está funcionando*/
+  findByTitulo(){
+    this.usuarioService.getByNomeProduto(this.titulo).subscribe((resp: Produtos) =>{
+      this.produto = resp
+    })
   }
 
   cadastrarProduto(){
@@ -33,9 +54,9 @@ export class ComprasComponent implements OnInit {
     this.usuarioService.novoProduto(this.produto, this.idUser).subscribe((resp: Produtos)=>{
       this.produto = resp
       alert('Produto cadastrado com sucesso!')
+      this.findAllProdutos()
       this.produto = new Produtos()
     })
-
   }
 
   tipoProduto(event: any){
