@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Produtos } from '../model/Produtos';
 import { UsuarioService } from '../service/usuario.service';
@@ -26,7 +26,7 @@ export class ComprasComponent implements OnInit {
       this.router.navigate(['/inicio'])
       alert('Sua sessão expirou. Faça o login novamente!')
     }
-    this.findAllProdutos()
+
   }
 
   findAllProdutos(){
