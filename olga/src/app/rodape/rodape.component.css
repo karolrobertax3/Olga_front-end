@@ -1,24 +1,16 @@
-ul.social-network{
-    list-style: none;
-    padding: 0;
+.backgroud{
+    background-color: #178A41;
 }
-ul.social-network li{
-    display: inline;
+.fs{
+font-size: 16pt;
 }
 
-.fa{
-    font-size: 35pt;
+a{
+    text-decoration: none;
     color: white;
-    padding: 10px;
 }
-
-.fa-facebook-square:hover{
-    color: #3b5998;
-}
-
-.fa-instagram:hover{
-color: #C13584;
-}
-.fa-linkedin-square:hover{
-    color: #0072b1 
+hr{
+    color: white;
+    padding: 0;
+    margin: 0;
 }
