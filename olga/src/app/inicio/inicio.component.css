@@ -3,6 +3,10 @@ h1, h5, h6, a{
     color: #178a41;
 }
 
+a{
+  cursor: pointer;
+}
+
 .navbar a:hover{
     color: #178a41;
 }
