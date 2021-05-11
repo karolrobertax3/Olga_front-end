@@ -34,7 +34,6 @@ usuario : Usuario = new Usuario
 
   getAllProdutores():Observable<Usuario>{
     return this.http.get<Usuario>('http://localhost:8080/usuarios/nome',this.token)
-
   }
 
   novoProduto(produto:Produtos, id_Usuario:number):Observable<Produtos>{
