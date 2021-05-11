@@ -26,7 +26,6 @@ export class ComprasComponent implements OnInit {
       this.router.navigate(['/inicio'])
       alert('Sua sessão expirou. Faça o login novamente!')
     }
-    this.findAllProdutos()
   }
 
   findAllProdutos(){
@@ -42,8 +41,8 @@ export class ComprasComponent implements OnInit {
   }
 /*tentativa de fazer com parametros ainda não está funcionando*/
   findByTitulo(){
-    this.usuarioService.getByNomeProduto(this.titulo).subscribe((resp: Produtos) =>{
-      this.produto = resp
+    this.usuarioService.getByNomeProduto(this.titulo).subscribe((resp: Produtos[]) =>{
+      this.listaProdutos = resp
     })
   }
 
