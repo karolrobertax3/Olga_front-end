@@ -1,5 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { ThrowStmt } from '@angular/compiler';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
@@ -11,6 +10,7 @@ import { Usuario } from '../model/Usuario';
 })
 export class UsuarioService {
 usuario : Usuario = new Usuario
+produto : Produtos = new Produtos
 
   constructor(
     private http:HttpClient
@@ -27,14 +27,20 @@ usuario : Usuario = new Usuario
   getOrganicos(): Observable<Produtos[]>{
     return this.http.get<Produtos[]>('http://localhost:8080/produtos/organicos?organicos=true', this.token)
   }
-  /*tentativa de fazer com parametros não está funcionando*/
-  getByNomeProduto(titulo: string): Observable<Produtos>{
-    return this.http.get<Produtos>(`http://localhost:8080/produtos/nome/produto?titulo=${titulo}`, this.token)
+ 
+  getByNomeProduto(titulo: string): Observable<Produtos[]>{
+   /* const options = titulo ?{ params: new HttpParams().set('titulo', titulo) } : {};
+    return this.http.get<Produtos[]>('http://localhost:8080/produtos/nome/produto?', options)*/
+    let url = 'http://localhost:8080/produtos/nome/produto/'
+    return this.http.get<Produtos[]>(url+this.produto.titulo, this.token)
+  }
+
+  getByIdProduto(idProduto: number): Observable<Produtos>{
+    return this.http.get<Produtos>(`http://localhost:8080/produtos/${idProduto}`, this.token)
   }
 
   getAllProdutores():Observable<Usuario>{
     return this.http.get<Usuario>('http://localhost:8080/usuarios/nome',this.token)
-
   }
 
   novoProduto(produto:Produtos, id_Usuario:number):Observable<Produtos>{
@@ -42,6 +48,9 @@ usuario : Usuario = new Usuario
     return this.http.post<Produtos>(url+id_Usuario,produto,this.token)
   }
 
+  comprarProduto(idProduto: number, idUsuario: number, qtdCompras:number): Observable<Produtos>{
+    return this.http.put<Produtos>(`http://localhost:8080/usuarios/produto/compra/${idProduto}/${idUsuario}/${qtdCompras}`, this.token)
+  }
   
 }
 

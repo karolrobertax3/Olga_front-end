@@ -11,6 +11,7 @@ import { ComprasComponent } from './compras/compras.component';
 import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { ProdutosComponent } from './produtos/produtos.component';
+import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ProdutosComponent } from './produtos/produtos.component';
     RodapeComponent,
     LojaComponent,
     ComprasComponent,
-    ProdutosComponent
+    ProdutosComponent,
+    UsuarioEditComponent
   ],
   imports: [
     BrowserModule,

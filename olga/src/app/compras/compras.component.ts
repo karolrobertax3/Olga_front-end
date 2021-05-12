@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Produtos } from '../model/Produtos';
 import { UsuarioService } from '../service/usuario.service';
@@ -15,9 +15,14 @@ export class ComprasComponent implements OnInit {
   idUser = environment.idUsuario
   listaProdutos: Produtos[]
   titulo: string
+  qtdCompras: number
+
+  idProduto: number
+
 
   constructor(
     private router: Router,
+    private route: ActivatedRoute,
     private usuarioService : UsuarioService
   ) { }
 
@@ -27,11 +32,13 @@ export class ComprasComponent implements OnInit {
       alert('Sua sessão expirou. Faça o login novamente!')
     }
     this.findAllProdutos()
+    console.log(this.idUser.toString())
   }
 
   findAllProdutos(){
     this.usuarioService.getAllProdutos().subscribe((resp: Produtos[]) =>{
       this.listaProdutos = resp
+      console.log(resp)
     })
   }
 
@@ -40,10 +47,16 @@ export class ComprasComponent implements OnInit {
       this.listaProdutos = resp
     })
   }
+
+  findByIdProduto(idProduto: number){
+    this.usuarioService.getByIdProduto(idProduto).subscribe((resp: Produtos) =>{
+      this.produto = resp
+    })
+  }
 /*tentativa de fazer com parametros ainda não está funcionando*/
   findByTitulo(){
-    this.usuarioService.getByNomeProduto(this.titulo).subscribe((resp: Produtos) =>{
-      this.produto = resp
+    this.usuarioService.getByNomeProduto(this.titulo).subscribe((resp: Produtos[]) =>{
+      this.listaProdutos = resp
     })
   }
 
@@ -59,12 +72,24 @@ export class ComprasComponent implements OnInit {
     })
   }
 
+  qtdCompra(event: any){
+    this.qtdCompras = event.target.value
+  }
+
   tipoProduto(event: any){
     this.organico = event.target.value
   }
 
   categoriaProduto(event:any){
     this.produto.categoria = event.target.value
+  }
+
+  comprarProduto(idProduto: number){
+    this.usuarioService.comprarProduto(idProduto, this.idUser, this.qtdCompras).subscribe((resp: Produtos) => {
+      this.produto = resp
+      this.produto = new Produtos()
+      this.qtdCompras = 0
+    })   
   }
 
 }
