@@ -29,8 +29,14 @@ produto : Produtos = new Produtos
   }
  
   getByNomeProduto(titulo: string): Observable<Produtos[]>{
-    const options = titulo ?{ params: new HttpParams().set('titulo', titulo) } : {};
-    return this.http.get<Produtos[]>('http://localhost:8080/produtos/nome/produto?', options)
+   /* const options = titulo ?{ params: new HttpParams().set('titulo', titulo) } : {};
+    return this.http.get<Produtos[]>('http://localhost:8080/produtos/nome/produto?', options)*/
+    let url = 'http://localhost:8080/produtos/nome/produto/'
+    return this.http.get<Produtos[]>(url+this.produto.titulo, this.token)
+  }
+
+  getByIdProduto(idProduto: number): Observable<Produtos>{
+    return this.http.get<Produtos>(`http://localhost:8080/produtos/${idProduto}`, this.token)
   }
 
   getAllProdutores():Observable<Usuario>{
@@ -42,6 +48,9 @@ produto : Produtos = new Produtos
     return this.http.post<Produtos>(url+id_Usuario,produto,this.token)
   }
 
+  comprarProduto(idProduto: number, idUsuario: number, qtdCompras:number): Observable<Produtos>{
+    return this.http.put<Produtos>(`http://localhost:8080/usuarios/produto/compra/${idProduto}/${idUsuario}/${qtdCompras}`, this.token)
+  }
   
 }
 

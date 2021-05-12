@@ -80,6 +80,9 @@
           <p class="card-text">Quantidade: {{item.qtdEstoque}}.</p>
           <p class="card-text">Preço: {{item.preco}}.</p>
           <p class="card-text">Organico: {{item.organico}}.</p>
+          <label for="qtdCompras">Quantidade</label>
+          <input (input)='qtdCompra($event)' type="number" name="" id="">
+          <button class="btn btn-success" (click)='comprarProduto(item.idProduto)'>Comprar</button>        
         </div>
       </div>
     </div>
