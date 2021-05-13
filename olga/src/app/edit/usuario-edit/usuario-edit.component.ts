@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Usuario } from 'src/app/model/Usuario';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-usuario-edit',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuarioEditComponent implements OnInit {
 
-  constructor() { }
+  usuario: Usuario = new Usuario()
+  
+  constructor(
+    private authService: AuthService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    window.scroll(0,0)
+    
+
   }
 
 }
