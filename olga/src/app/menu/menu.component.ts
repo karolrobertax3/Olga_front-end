@@ -17,4 +17,9 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  teste(){
+    console.log(environment.idUsuario)
+    console.log(environment.foto)
+    console.log(environment.nome)
+  }
 }
