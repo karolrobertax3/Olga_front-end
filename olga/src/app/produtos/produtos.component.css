@@ -127,6 +127,7 @@ body {
 /* FIM BOTÃO PESQUISA */
 
 
+/*
 .swiper-slide {
     width: 250px !important;
 }
@@ -245,6 +246,8 @@ body {
     font-size: 30px;
     font-family: monospace;
 }
+*/
+
 
 .card-box {
     border: solid 1px #178A41;
@@ -300,6 +303,7 @@ body {
     height: 250px;
     background: url(http://xtechfiles.s3.amazonaws.com/uploads/images/full/d7654353a86172a19e0ae4769085acc2.jpg);
 }
+
 
 /*RESPONSIVIDADE*/
 
