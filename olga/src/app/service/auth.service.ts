@@ -8,6 +8,8 @@ import { UsuarioLogin } from '../model/UsuarioLogin';
   providedIn: 'root'
 })
 export class AuthService {
+  getByidProdutos: any;
+  
 
   constructor(
     private http: HttpClient

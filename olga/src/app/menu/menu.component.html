@@ -1,36 +1,36 @@
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#"><img src="https://i.imgur.com/7hr1X3M.png" alt="logo" width="150px" height="196"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
       <span class="navbar-toggler-icon"></span>
     </button>
-  
+
     <div class="collapse navbar-collapse d-flex align-items-center" id="conteudoNavbarSuportado">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Início <span class="sr-only">(página atual)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Apoiar</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Lojas</a>
-          </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Início <span class="sr-only">(página atual)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Apoiar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Lojas</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Categoria
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Frutas</a>
-            <a class="dropdown-item" href="#">Legumes</a>
-            <a class="dropdown-item" href="#">Verduras</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Outros</a>
-          </div>
-        </li>
-        
-      </ul>
-      <a [routerLink]="['/usuario-edit', id]">Editar dados</a>
-   <div>Sair</div>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Frutas</a>
+                    <a class="dropdown-item" href="#">Legumes</a>
+                    <a class="dropdown-item" href="#">Verduras</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Outros</a>
+                </div>
+            </li>
+
+        </ul>
+        <a [routerLink]="['/usuario-edit', id]">Editar dados</a>
+        <a [routerLink]="['/produtos-edit', id]">Editar dados</a>
+        <div>Sair</div>
     </div>
 </nav>

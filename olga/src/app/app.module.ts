@@ -12,6 +12,7 @@ import { MenuComponent } from './menu/menu.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
+import { ProdutosEditComponent } from './edit/produtos-edit/produtos-edit.component';
 
 
 @NgModule({
@@ -25,7 +26,9 @@ import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component
     LojaComponent,
     ComprasComponent,
     ProdutosComponent,
-    UsuarioEditComponent
+    UsuarioEditComponent,
+    
+    ProdutosEditComponent
   ],
   imports: [
     BrowserModule,
