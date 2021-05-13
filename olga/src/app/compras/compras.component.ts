@@ -4,16 +4,24 @@ import { environment } from 'src/environments/environment.prod';
 import { Produtos } from '../model/Produtos';
 import { UsuarioService } from '../service/usuario.service';
 
+interface itemCarrinho { 
+  idProduto: number;
+  idUser: number;
+  quantidade: number;
+}
+
 @Component({
   selector: 'app-compras',
   templateUrl: './compras.component.html',
   styleUrls: ['./compras.component.css']
 })
+
 export class ComprasComponent implements OnInit {
   produto : Produtos = new Produtos
   organico : boolean 
   idUser = environment.idUsuario
   listaProdutos: Produtos[]
+  totalCompras = new Array<itemCarrinho>()
   titulo: string
   qtdCompras: number
 
@@ -23,7 +31,7 @@ export class ComprasComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private usuarioService : UsuarioService
+    private usuarioService : UsuarioService,
   ) { }
 
   ngOnInit() {
@@ -84,12 +92,38 @@ export class ComprasComponent implements OnInit {
     this.produto.categoria = event.target.value
   }
 
-  comprarProduto(idProduto: number){
-    this.usuarioService.comprarProduto(idProduto, this.idUser, this.qtdCompras).subscribe((resp: Produtos) => {
-      this.produto = resp
-      this.produto = new Produtos()
-      this.qtdCompras = 0
-    })   
+  comprarProduto({ idProduto, idUser, quantidade }: itemCarrinho){
+    this.usuarioService.comprarProduto(idProduto, idUser, quantidade).subscribe((resp: Produtos) => {
+    this.produto = resp
+    this.produto = new Produtos()
+    this.qtdCompras = 0
+     })
+    
   }
 
+  atualizarCarrinho({ idProduto }: Produtos){
+    if(!this.qtdCompras || Number(this.qtdCompras) === 0) return;
+    const itemCarrinho = {
+      idProduto: Number(idProduto),
+      idUser: Number(this.idUser),
+      quantidade: Number(this.qtdCompras)
+    }
+    this.totalCompras.push(itemCarrinho)
+    console.log(this.totalCompras)
+    this.qtdCompras = 0
+  }
+// listar itens carrinho
+  produtosCarrinho(){
+    return this.totalCompras
+  }
+//comprar itens carrinho
+  comprar(){
+    if(this.totalCompras.length <=0){
+      alert('O carrinho está vazio')
+      return;
+    }
+    this.totalCompras.map(item => {
+      this.comprarProduto(item)
+    })
+  }
 }
