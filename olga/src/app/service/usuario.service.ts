@@ -29,10 +29,7 @@ produto : Produtos = new Produtos
   }
  
   getByNomeProduto(titulo: string): Observable<Produtos[]>{
-   /* const options = titulo ?{ params: new HttpParams().set('titulo', titulo) } : {};
-    return this.http.get<Produtos[]>('http://localhost:8080/produtos/nome/produto?', options)*/
-    let url = 'http://localhost:8080/produtos/nome/produto/'
-    return this.http.get<Produtos[]>(url+this.produto.titulo, this.token)
+    return this.http.get<Produtos[]>(`http://localhost:8080/produtos/nome/${titulo}`, this.token)
   }
 
   getByIdProduto(idProduto: number): Observable<Produtos>{
