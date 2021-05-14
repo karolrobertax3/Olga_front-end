@@ -5,6 +5,10 @@
     <div class="col-md-12">
       <div class="filtro">
         <button class="btn-filtro" (click)='findOrganicos()'>Orgânicos</button>
+        <div class="d-flex">
+          <input type="text" class="pesquisar" id="titulo" placeholder="pesquisar produto" [(ngModel)]='tituloProd' (keyup)='findByTituloProduto()'>
+          <span class="btn-pesquisa"><img src="https://i.imgur.com/T4FB0as.png"></span>
+        </div>
         <!-- Botão para acionar modal -->
       <button class="btn-filtro" type="button" data-toggle="modal" data-target="#ModalLongoExemplo">
         Cadastre um novo produto
@@ -16,6 +20,13 @@
 </div>
 
 <div class="container">
+
+  <!-- <div class="row d-flex justify-content-center">
+    <div class="col-md-4">
+      
+    </div>
+  </div> -->
+
     <div class="row">
         <div class="card-container" *ngFor='let item of listaProdutos'>
           <p class="text-uppercase">{{item.titulo}}</p>
@@ -25,16 +36,33 @@
           <div class="container-compra">
           <p class="preco"><span>R${{item.preco}}</span></p>
           <input (input)='qtdCompra($event)' type="number" placeholder="Quantidade">
-          <button class="btn-compra" (click)='atualizarCarrinho(item)'>Comprar</button>
+          <button class="btn-compra" (click)='atualizarCarrinho(item)'><i class="fa fa-shopping-basket" aria-hidden="true"></i>
+          </button>
           </div>
         </div>
         </div>
     </div>
     <div class="row">
-      <div class="col-md-12 carrinho">
-        <button class="btn-compra" (click)='comprar()'>Comprar</button>
+      <div class="col-md-12 carrinho" id="carrinho">
+        <div class="row">
+          <div class="exibir" *ngFor='let item of totalCompras'>
+            <p class="text-uppercase font-weight-bold nome">Nome: {{item.titulo}}</p>
+            <p class="text-uppercase font-weight-bold qtd">Quantidade: {{item.quantidade}}</p>
+            <p class="text-uppercase font-weight-bold precoUn">Preço unitário R$ {{item.preco}}</p>
+          </div>
+      
+        </div>
+
+ 
       </div>
-    </div>  
+      <p class="text-uppercase totalCarrinho">Valor total R$ {{totalValorCarrinho}}</p>
+    </div>
+     
+    <div class="row">
+      <div class="col-md-12">
+        <button class="finalizar" (click)='comprar()'>Finalizar compra</button>
+      </div>
+    </div>
 
 </div>
 
