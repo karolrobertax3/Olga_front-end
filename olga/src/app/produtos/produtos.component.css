@@ -131,15 +131,13 @@
     font-size: 30px;
     font-family: monospace;
 }
-*/
 
-
-.card-box p{
+.card-box-container {
     border: solid 1px #178A41;
     width: 40%;
     height: 485px;
     border-radius: 5px;
-    background: url(../../assets/images/colheita-gif.gif) no-repeat;
+    background: url(https://i.imgur.com/viQS1Ct.png) no-repeat;
 }
 
 .card-superior{
