@@ -41,6 +41,10 @@
     color: #502c1c;
 }
 
+a {
+    cursor: pointer;
+}
+
 /*FIM MENU*/
 
 /* BOTÃO PESQUISA MENU */

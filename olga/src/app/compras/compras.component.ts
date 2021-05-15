@@ -42,6 +42,7 @@ export class ComprasComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.scroll(0,0)
     if(environment.token == ''){
       this.router.navigate(['/inicio'])
       this.alertas.showAlertDanger('Sua sessão expirou. Faça o login novamente!')
