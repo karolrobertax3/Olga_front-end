@@ -19,7 +19,7 @@ produto : Produtos = new Produtos
   token = {
     headers: new HttpHeaders({'Authorization': environment.token, 'Content-Type':'application/json'})
   }
-  
+
   getAllProdutos(): Observable<Produtos[]>{
     return this.http.get<Produtos[]>('http://localhost:8080/produtos', this.token)
   }

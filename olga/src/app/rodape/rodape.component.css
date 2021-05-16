@@ -1,6 +1,7 @@
 .backgroud{
     background-color: #178A41;
 }
+
 .fs{
 font-size: 16pt;
 }
@@ -8,9 +9,47 @@ font-size: 16pt;
 a{
     text-decoration: none;
     color: white;
+    cursor: pointer;
 }
+
 hr{
     color: white;
     padding: 0;
     margin: 0;
+}
+
+.col ul{
+    list-style: none;
+    border-left: solid 1px white;
+}
+
+.col ul li{
+    margin-bottom: 30px;
+}
+
+.col ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.col ul li a img{
+    margin-left: -9px;
+}
+
+.col-direita ul{
+    list-style: none;
+    border-left: solid 1px white;
+}
+
+.col-direita ul li{
+    margin-bottom: 30px;
+}
+
+.col-direita ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.col-direita{
+    margin-left: -100px;
 }

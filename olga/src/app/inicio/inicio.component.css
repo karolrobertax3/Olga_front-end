@@ -30,6 +30,23 @@ a{
     color: #52504E;
 }
 
+.form-inline, a{
+  color: #52504E;
+}
+
+.form-inline:hover, a:hover{
+  color: #178A41;
+}
+
+.form-inline .fa{
+  font-size: 28px;
+  margin-right: 5px;
+}
+
+.form-inline a{
+  text-decoration: none;
+}
+
 
 
 .cards ul li{

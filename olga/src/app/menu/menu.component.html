@@ -21,7 +21,10 @@
             <a href="">Produtos</a>
           </li>
           <li>
-            <a [routerLink]="['/usuario-edit', id]" (click)='teste()'>Editar dados</a>
+            <a [routerLink]="['/usuario-edit', id]">Editar dados</a>
+          </li>
+          <li>
+            <a (click)='sair()'>Sair <i class="fa fa-sign-out" aria-hidden="true"></i></a>
           </li>
         </ul>
       </nav>
