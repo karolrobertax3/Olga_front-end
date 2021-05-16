@@ -1,1 +1,3 @@
-<app-produtos></app-produtos>
+<app-menu *ngIf='service.logado()'></app-menu>
+<router-outlet></router-outlet>
+<app-rodape></app-rodape>

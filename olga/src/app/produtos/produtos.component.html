@@ -1,4 +1,40 @@
+<div class="overflow">
+  <!--MENU-->
+<div class="container-fluid d-flex justify-content-center">
 
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse align-right" id="navbarNavAltMarkup">
+      <div class="navbar-nav d-flex justify-content-around margin-top">
+        <a class="nav-item nav-link text-uppercase p-3" href="#sobre">sobre nós</a>
+        <a class="nav-item nav-link text-uppercase p-3" href="#missao">missão visão e valores</a>
+        <a class="nav-item nav-link text-uppercase p-3" href="#apoie">apoie</a>
+      </div>
+    </div>
+
+    <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNavAltMarkup">
+      <a routerLink='/inicio'><img class="logo" width="123" height="100" src="https://i.imgur.com/HNJ69VP.png"
+          alt=""></a>
+    </div>
+
+    <div class="collapse navbar-collapse align-right" id="navbarNavAltMarkup">
+      <div class="navbar-nav d-flex justify-content-around margin-top">
+        <a class="nav-item nav-link text-uppercase p-3" href="#quem">quem somos</a>
+        <a class="nav-item nav-link text-uppercase p-3" routerLink="/produtos">produtos</a>
+        <form class="form-inline">
+          <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+          <a class="text-uppercase" data-toggle="modal" data-target="#cadastrar">Cadastrar /</a>
+          <a class="text-uppercase" data-toggle="modal" data-target="#entrar">&nbsp;Entrar</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+</div>
+<!--/MENU-->
 <!---CARROSSEL-->
   <div class="container-fluid" id="carousel">
     <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
@@ -170,10 +206,10 @@
                   
                           <p class="detail">
                               Fruta do Conde
-                              <a href="#" class="price">Preço-R$ 40</a>
+                              <a href="#" class="price">Preço-R$ 18</a>
                           </p> 
                           <div class="cart">
-                              <a href="#">Comprar</a>
+                              <a data-toggle="modal" data-target="#cadastrar">Comprar</a>
                           </div>     
                       </div>
                     </div>
@@ -191,10 +227,10 @@
                   
                           <p class="detail">
                               Abacate
-                              <a href="#" class="price">Preço-R$ 40</a>
+                              <a href="#" class="price">Preço-R$ 7,99</a>
                           </p> 
                           <div class="cart">
-                              <a href="#">Comprar</a>
+                              <a data-toggle="modal" data-target="#cadastrar">Comprar</a>
                           </div>     
                       </div>
                     </div>
@@ -213,10 +249,10 @@
                   
                           <p class="detail">
                               Kiwi
-                              <a href="#" class="price">Preço-R$ 40</a>
+                              <a href="#" class="price">Preço-R$ 8,50</a>
                           </p> 
                           <div class="cart">
-                              <a href="#">Comprar</a>
+                              <a data-toggle="modal" data-target="#cadastrar">Comprar</a>
                           </div>     
                       </div>
                     </div>
@@ -246,10 +282,10 @@
                   
                           <p class="detail">
                               Abacaxi
-                              <a href="#" class="price">Preço-R$ 40</a>
+                              <a href="#" class="price">Preço-R$ 7,99</a>
                           </p> 
                           <div class="cart">
-                              <a href="#">Comprar</a>
+                              <a data-toggle="modal" data-target="#cadastrar">Comprar</a>
                           </div>     
                       </div>
                     </div>
@@ -267,10 +303,10 @@
                   
                           <p class="detail">
                               Goiaba Vermelha
-                              <a href="#" class="price">Preço-R$ 40</a>
+                              <a href="#" class="price">Preço-R$ 2,60</a>
                           </p> 
                           <div class="cart">
-                              <a href="#">Comprar</a>
+                              <a data-toggle="modal" data-target="#cadastrar">Comprar</a>
                           </div>     
                       </div>
                     </div>
@@ -289,10 +325,10 @@
                   
                           <p class="detail">
                               Laranja Perâ
-                              <a href="#" class="price">Preço-R$ 40</a>
+                              <a href="#" class="price">Preço-R$ 1,80</a>
                           </p> 
                           <div class="cart">
-                              <a href="#">Comprar</a>
+                              <a data-toggle="modal" data-target="#cadastrar">Comprar</a>
                           </div>     
                       </div>
                     </div>
@@ -418,10 +454,10 @@
                 
                         <p class="detail">
                             Espinafre
-                            <a href="#" class="price">Preço-R$ 40</a>
+                            <a href="#" class="price">Preço-R$ 3,29</a>
                         </p> 
                         <div class="cart">
-                            <a href="#">Comprar</a>
+                            <a data-toggle="modal" data-target="#cadastrar">Comprar</a>
                         </div>     
                     </div>
                   </div>
@@ -439,10 +475,10 @@
                 
                         <p class="detail">
                             Alface Americana
-                            <a href="#" class="price">Preço-R$ 40</a>
+                            <a href="#" class="price">Preço-R$ 3,25</a>
                         </p> 
                         <div class="cart">
-                            <a href="#">Comprar</a>
+                            <a data-toggle="modal" data-target="#cadastrar">Comprar</a>
                         </div>     
                     </div>
                   </div>
@@ -461,10 +497,10 @@
                 
                         <p class="detail">
                             Couve-flor
-                            <a href="#" class="price">Preço-R$ 40</a>
+                            <a href="#" class="price">Preço-R$ 4,75</a>
                         </p> 
                         <div class="cart">
-                            <a href="#">Comprar</a>
+                            <a data-toggle="modal" data-target="#cadastrar">Comprar</a>
                         </div>     
                     </div>
                   </div>
@@ -494,10 +530,10 @@
                 
                         <p class="detail">
                             Beterraba
-                            <a href="#" class="price">Preço-R$ 40</a>
+                            <a href="#" class="price">Preço-R$ 3,25</a>
                         </p> 
                         <div class="cart">
-                            <a href="#">Comprar</a>
+                            <a data-toggle="modal" data-target="#cadastrar">Comprar</a>
                         </div>     
                     </div>
                   </div>
@@ -515,10 +551,10 @@
                 
                         <p class="detail">
                             Batatas
-                            <a href="#" class="price">Preço-R$ 40</a>
+                            <a href="#" class="price">Preço-R$ 2,99</a>
                         </p> 
                         <div class="cart">
-                            <a href="#">Comprar</a>
+                            <a data-toggle="modal" data-target="#cadastrar">Comprar</a>
                         </div>     
                     </div>
                   </div>
@@ -537,10 +573,10 @@
                 
                         <p class="detail">
                             Brócolis
-                            <a href="#" class="price">Preço-R$ 40</a>
+                            <a href="#" class="price">Preço-R$ 5,63</a>
                         </p> 
                         <div class="cart">
-                            <a href="#">Comprar</a>
+                            <a data-toggle="modal" data-target="#cadastrar">Comprar</a>
                         </div>     
                     </div>
                   </div>
@@ -561,4 +597,171 @@
 
   </div>
 
+</div>
+
+
+<!--CADASTRAR-->
+
+<!-- Modal -->
+<div class="modal fade" id="cadastrar" tabindex="-1" role="dialog" aria-labelledby="TituloModalLongoExemplo"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalLongoExemplo">Por favor, preencha todos os dados</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="nome">Nome</label>
+            <input [(ngModel)]='usuario.nomeRazaoSocial' type="nome" name="nomeRazaoSocial" class="form-control"
+              id="nomeRazaoSocial" placeholder="Nome completo">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="cpfCnpj">CPF ou CNPJ</label>
+            <input [(ngModel)]='usuario.cpfCnpj' type="cpf" name="cpfCnpj" class="form-control" id="cpfCnpj"
+              placeholder="Digite seu CPF ou CNPJ">
+          </div>
+          <!-- <div class="form-group col-md-12">
+            <label for="foto">Foto</label>
+            <input [(ngModel)]='usuario.foto' type="foto" name="foto" class="form-control" id="foto"
+              placeholder="Insira o link de uma foto para o seu perfil">
+          </div>
+          <div class="form-group col-md-12">
+            <label for="cpf">Foto da Loja</label>
+            <input [(ngModel)]='usuario.fotoLoja' type="fotoLoja" name="fotoLoja" class="form-control" id="fotoLoja"
+              placeholder="Insira o link de uma foto para sua loja">
+          </div> -->
+          <div class="form-group col-md-12">
+            <label for="email">Email</label>
+            <input [(ngModel)]='usuario.email' type="email" name="email" class="form-control" id="email"
+              placeholder="exemplo@email.com">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="senha">Senha</label>
+            <input (input)='confirmSenha($event)' type="password" name="senha" class="form-control" id="senha"
+              placeholder="Digite uma senha segura">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="confirmaSenha">Confirmar Senha</label>
+            <input [(ngModel)]='usuario.senha' type="password" class="form-control" id="confirmaSenha"
+              placeholder="Confirme sua senha">
+          </div>
+        </div>
+        <div class="form-group col-md-12">
+          <label for="endereco">Endereço</label>
+          <input [(ngModel)]='usuario.endereco' type="text" name="endereco" class="form-control" id="endereco"
+            placeholder="Informe seu endereço">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="endereco">Número</label>
+          <input [(ngModel)]='usuario.numero' type="text" name="numero" class="form-control" id="numero"
+            placeholder="000">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="cidade">Cidade</label>
+            <input [(ngModel)]='usuario.cidade' type="text" name="cidade" class="form-control" id="cidade">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="uf">Estado</label>
+            <select id="uf" name="uf" class="form-control" (change)='estadoCadastro($event)'>
+              <option selected>Escolher...</option>
+              <option value="AC">AC</option>
+              <option value="AL">AL</option>
+              <option value="AP">AP</option>
+              <option value="AM">AM</option>
+              <option value="BA">BA</option>
+              <option value="CE">CE</option>
+              <option value="DF">DF</option>
+              <option value="ES">ES</option>
+              <option value="GO">GO</option>
+              <option value="MA">MA</option>
+              <option value="MT">MT</option>
+              <option value="MS">MS</option>
+              <option value="MG">MG</option>
+              <option value="PA">PA</option>
+              <option value="PB">PB</option>
+              <option value="PR">PR</option>
+              <option value="PE">PE</option>
+              <option value="PI">PI</option>
+              <option value="RJ">RJ</option>
+              <option value="RN">RN</option>
+              <option value="RS">RS</option>
+              <option value="RO">RO</option>
+              <option value="RR">RR</option>
+              <option value="SC">SC</option>
+              <option value="SP">SP</option>
+              <option value="SE">SE</option>
+              <option value="TO">TO</option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="cep">CEP</label>
+            <input [(ngModel)]='usuario.cep' type="text" name="cep" class="form-control" id="cep">
+          </div>
+          <div class="form-group">
+            <label for="telefone">Telefone</label>
+            <input [(ngModel)]='usuario.telefone' type="text" name="telefone" class="form-control" id="telefone"
+              placeholder="(00)00000-0000">
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger mr-5" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-success" data-toggle="modal" data-dismiss="modal" data-target="#entrar" (click)='cadastrar()'>Cadastrar</button>
+        <p>Já tem uma conta? <a data-toggle="modal" data-dismiss="modal" data-target="#entrar">Entre!</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/CADASTRAR-->
+
+
+<!--LOGIN-->
+
+<!-- Modal -->
+<div class="modal fade" id="entrar" tabindex="-1" role="dialog" aria-labelledby="TituloModalLongoExemplo"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalLongoExemplo">Se já possui uma conta, informe os dados de acesso.
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Endereço de email</label>
+            <input [(ngModel)]='usuarioLogin.email' type="email" name="email" class="form-control"
+              id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+            <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com
+              ninguém.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Senha</label>
+            <input [(ngModel)]='usuarioLogin.senha' type="password" name="senha" class="form-control"
+              id="exampleInputPassword1" placeholder="Senha">
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger mr-5" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success" data-dismiss="modal" (click)='entrar()'>Entrar</button>
+        <p>Ainda não tem conta? <a data-toggle="modal" data-dismiss="modal" data-target="#cadastrar">Cadastre-se!</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/LOGIN-->
 </div>

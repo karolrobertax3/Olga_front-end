@@ -1,3 +1,60 @@
+h1, h5, h6, a{
+    font-family: 🇲🇸 ;
+    color: #178a41;
+}
+
+a{
+  cursor: pointer;
+}
+
+.navbar a:hover{
+    color: #178a41;
+}
+
+.align-right{
+    margin-left: 100px;
+}
+.logo{
+    display: block;
+    clear: both;
+}
+.margin-top{
+    margin-top: 45px;
+    margin-left: -50px;
+    margin-right: 100px;
+}
+.text-green{
+    color: #178a41;
+}
+.text-gray{
+    color: #52504E;
+}
+
+.form-inline, a{
+    color: #52504E;
+}
+
+.form-inline:hover, a:hover{
+    color: #178A41;
+}
+
+.form-inline .fa{
+    font-size: 28px;
+    margin-right: 5px;
+}
+
+.form-inline a{
+    text-decoration: none;
+}
+
+.overflow{
+    overflow-x: hidden;
+}
+
+.margin-top100{
+    margin-top: 130px;
+}
+
 .borda15 {
     border-radius: 35px;
     height: 350px;

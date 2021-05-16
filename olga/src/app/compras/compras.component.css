@@ -60,8 +60,8 @@
     height: 40px;
     border-top-right-radius: none;
     border-bottom-right-radius: none;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     border: solid 1px #178A41;
     margin-top: 8px;
 }
@@ -69,8 +69,8 @@
 .container-compra input:focus {
     border: solid 1px #178A41;
     border-right: none;
-    border-bottom-left-radius: 4px;
-    border-top-left-radius: 4px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
     box-shadow: 2px 0 5px 2px rgb(199, 216, 230);
     outline: 0;
 }
@@ -80,8 +80,8 @@
     border: none;
     background-color: #178A41;
     color: white;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     height: 40px;
     border-left: none;
     margin-top: 8px;
@@ -90,6 +90,8 @@
 .container-compra .btn-compra:hover{
     background-color: #502C1C;
     transition: linear 400ms;
+    transform:scale(1.07);
+    transition: all ease 0.3s;
 }
 
 .card-container img {
@@ -133,15 +135,108 @@
     border: solid 1px #ddd;
     border-radius: 5px;
     width: 500px;
-    height: 600px;
+    height: 300px;
     margin: 0 auto;
     padding: 0 2%;
     display: block;
     box-shadow: 2px 0px 5px rgba(190, 190, 190, .4);
     margin-bottom: 10px;
+    border-bottom: none;
+}
+
+.carrinho p{
+    margin-left: 470px;
 }
 
 .carrinho:hover {
     border: solid 1px #178A41;
 }
 
+.pesquisar{
+    width: 400px;
+    height: 60px;
+    padding: 10px;
+}
+
+.pesquisar:focus{
+    border: solid 1px #178A41;
+    border-right: none;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    box-shadow: 2px 0 5px 2px rgb(199, 216, 230);
+    outline: 0;
+}
+
+.btn-pesquisa{
+    border: none;
+    background-color: #178A41;
+    color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 60px;
+    width: 60px;
+    border-left: none;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-pesquisa img{
+    width: 50px;
+}
+
+.btn-compra .fa:hover{
+    transform:scale(1.07);
+    transition: all ease 0.3s;
+}
+
+.finalizar{
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #178A41;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.finalizar:hover{
+    transition: linear 400ms;
+    background-color: #502C1C;
+}
+
+.exibir .nome{
+    display: block;
+    margin-left: 35px;    
+}
+
+.exibir .precoUn{
+    display: block;
+    margin-left: 330px;
+}
+
+.exibir .qtd{
+    display: block;
+    margin-left: 300px;
+}
+
+.totalCarrinho{
+    margin-top: -10px;
+    border: solid 1px #178A41;
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    padding: 0 2%;
+    display: block;
+    box-shadow: 2px 0px 5px rgba(190, 190, 190, .4);
+    margin-bottom: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
