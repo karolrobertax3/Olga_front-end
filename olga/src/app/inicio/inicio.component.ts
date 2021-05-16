@@ -54,10 +54,8 @@ export class InicioComponent implements OnInit {
       this.usuarioLogin = resp
       environment.idUsuario = this.usuarioLogin.idUsuario
       environment.token = this.usuarioLogin.token
-      environment.foto = this.usuarioLogin.foto
       environment.nome = this.usuarioLogin.nome
       environment.email = this.usuarioLogin.email
-      environment.fotoLoja = this.usuarioLogin.fotoLoja
       this.router.navigate(['/compras'])
       //this.alertas.showAlertSuccess('Seja bem vindo!')
 

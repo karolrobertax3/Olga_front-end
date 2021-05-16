@@ -13,7 +13,7 @@ import { UsuarioService } from '../service/usuario.service';
 export class MenuComponent implements OnInit {
 
   id = environment.idUsuario
-  foto = environment.foto
+  //foto = environment.foto
   nome = environment.nome
   listaProdutos: Produtos[]
   titulo: string
@@ -30,7 +30,7 @@ export class MenuComponent implements OnInit {
   sair(){
     environment.token = ''
     environment.nome = ''
-    environment.foto = ''
+    //environment.foto = ''
     environment.idUsuario = 0
     this.alertas.showAlertSuccess('Volte sempre!')
     this.router.navigate(['/inicio'])

@@ -150,9 +150,10 @@ export class ComprasComponent implements OnInit {
       this.totalCompras.map(item => {
         this.comprarProduto(item)
         this.alertas.showAlertSuccess('Compra realizada com sucesso!')
+        this.totalValorCarrinho = 0
       })
     }
-    this.findAllProdutos()
     this.totalCompras = []
+    window.scroll(0,0)
   }
 }
