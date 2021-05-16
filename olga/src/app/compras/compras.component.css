@@ -144,6 +144,10 @@
     border-bottom: none;
 }
 
+.carrinho p{
+    margin-left: 470px;
+}
+
 .carrinho:hover {
     border: solid 1px #178A41;
 }
@@ -205,27 +209,19 @@
     background-color: #502C1C;
 }
 
-.exibir{
-    display: flex;
-    border-bottom: dotted 1px black;
-    margin-bottom: 1px;
-    margin-top: 5px;
-    width: 100%;
-}
-
 .exibir .nome{
     display: block;
-    margin-left: 3px;    
+    margin-left: 35px;    
 }
 
 .exibir .precoUn{
     display: block;
-    margin-left: 360px;
+    margin-left: 330px;
 }
 
 .exibir .qtd{
     display: block;
-    margin-left: 330px;
+    margin-left: 300px;
 }
 
 .totalCarrinho{

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Produtos } from '../model/Produtos';
+import { AlertasService } from '../service/alertas.service';
 import { UsuarioService } from '../service/usuario.service';
 
 @Component({
@@ -18,33 +20,19 @@ export class MenuComponent implements OnInit {
   tituloProd: string
 
   constructor(
-    private usuarioService: UsuarioService
+    private router: Router,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit(): void {
   }
 
-  teste(){
-    console.log(environment.idUsuario)
-    console.log(environment.foto)
-    console.log(environment.nome)
-  }
-
-  findAllProdutos(){
-    this.usuarioService.getAllProdutos().subscribe((resp: Produtos[]) =>{
-      this.listaProdutos = resp
-      console.log(resp)
-    })
-  }
-
-  findByTituloProduto(){
-
-    if(this.tituloProd == ''){
-      this.findAllProdutos()
-    } else {
-      this.usuarioService.getByNomeProduto(this.tituloProd).subscribe((resp: Produtos[]) =>{
-        this.listaProdutos = resp
-      })
-    }
+  sair(){
+    environment.token = ''
+    environment.nome = ''
+    environment.foto = ''
+    environment.idUsuario = 0
+    this.alertas.showAlertSuccess('Volte sempre!')
+    this.router.navigate(['/inicio'])
   }
 }

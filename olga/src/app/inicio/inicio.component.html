@@ -15,7 +15,7 @@
     </div>
 
     <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNavAltMarkup">
-      <a href="inicio.component.html"><img class="logo" width="123" height="100" src="https://i.imgur.com/HNJ69VP.png"
+      <a routerLink='/inicio'><img class="logo" width="123" height="100" src="https://i.imgur.com/HNJ69VP.png"
           alt=""></a>
     </div>
 
@@ -24,10 +24,9 @@
         <a class="nav-item nav-link text-uppercase p-3" href="#quem">quem somos</a>
         <a class="nav-item nav-link text-uppercase p-3" routerLink="/produtos">produtos</a>
         <form class="form-inline">
-          <button class="btn btn-sm btn-success ml-auto" type="button" data-toggle="modal"
-            data-target="#cadastrar">Cadastre-se</button>
-          <button class="btn btn-sm btn-outline-success ml-auto" type="button" data-toggle="modal"
-            data-target="#entrar">Entrar</button>
+          <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+          <a class="text-uppercase" data-toggle="modal" data-target="#cadastrar">Cadastrar /</a>
+          <a class="text-uppercase" data-toggle="modal" data-target="#entrar">&nbsp;Entrar</a>
         </form>
       </div>
     </div>
@@ -318,17 +317,6 @@
   </div>
 </div>
 <!--/QUEM SOMOS-->
-
-<!--FOOTER-->
-<footer class="bg-secondary">
-  <hr>
-  <div class="text-center">
-    <p class="mt-2">Olga, o elo entre a horta e a sua mesa | &copy; 2021 Todos os direitos reservados.</p>
-</div>
-</footer>
-<!--/FOOTER-->
-
-
 
 <!--CADASTRAR-->
 

@@ -58,16 +58,8 @@ export class InicioComponent implements OnInit {
       environment.nome = this.usuarioLogin.nome
       environment.email = this.usuarioLogin.email
       environment.fotoLoja = this.usuarioLogin.fotoLoja
-
-      console.log(environment.idUsuario)
-      console.log(environment.token)
-      console.log(environment.nome)
-      console.log(environment.foto)
-      console.log(environment.fotoLoja)
-      console.log(environment.email)
-
       this.router.navigate(['/compras'])
-      this.alertas.showAlertSuccess('Usuário logado!')
+      //this.alertas.showAlertSuccess('Seja bem vindo!')
 
     }, erro => {
       if(erro.status == 500) {
