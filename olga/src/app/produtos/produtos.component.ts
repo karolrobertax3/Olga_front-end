@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProdutosComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    
+  ) { }
 
   ngOnInit() {
+    window.scroll(0,0)
   }
 
-}
+
+} 
