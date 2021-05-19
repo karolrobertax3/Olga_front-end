@@ -5,12 +5,12 @@
         <div class="filtro">
           <button class="btn-filtro" (click)='findOrganicos()'>Orgânicos</button>
           <div class="d-flex">
-            <input type="text" class="pesquisar" id="titulo" placeholder="pesquisar produto" [(ngModel)]='tituloProd' (keyup)='findByTituloProduto()'>
+            <input type="text" class="pesquisar" id="titulo" placeholder="Pesquisar produto" [(ngModel)]='tituloProd' (keyup)='findByTituloProduto()'>
             <span class="btn-pesquisa"><img src="https://i.imgur.com/T4FB0as.png"></span>
           </div>
           <!-- Botão para acionar modal -->
         <button class="btn-filtro" type="button" data-toggle="modal" data-target="#ModalLongoExemplo">
-          Cadastre um novo produto
+          Cadastre Um Novo Produto
         </button>
         </div> 
   
@@ -33,7 +33,7 @@
             <p class="text-uppercase">Estoque: {{item.qtdEstoque}}</p>
           <div class="card-box">   
             <div class="container-compra">
-            <p class="preco"><span>R${{item.preco}}</span></p>
+            <p class="preco"><span>R$ {{item.preco}}</span></p>
             <input (input)='qtdCompra($event)' type="number" placeholder="Quantidade">
             <button class="btn-compra" (click)='atualizarCarrinho(item)'><i class="fa fa-shopping-basket" aria-hidden="true"></i>
             </button>
@@ -78,11 +78,11 @@
           </div>
           <div class="col-md-4">
             
-            <p class="text-uppercase font-weight-bold qtd text-center pb-0">Un. {{item.quantidade}}</p>
+            <p class="text-uppercase font-weight-bold qtd text-center pb-0 mt-2">Un. {{item.quantidade}}</p>
           </div>
           <div class="col-md-4">
             
-            <p class="text-uppercase font-weight-bold precoUn text-right pb-0">R$ {{item.preco}}</p>
+            <p class="text-uppercase font-weight-bold precoUn text-right pb-0 mt-2">R$ {{item.preco}}</p>
           </div>
         </div>
         <p class="text-uppercase totalCarrinho text-rigth">Valor total R$ {{totalValorCarrinho}}</p>
