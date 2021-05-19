@@ -41,6 +41,8 @@
           </div>
           </div>
       </div>
+<!--
+      
       <div class="row">
         <div class="col-md-12 carrinho" id="carrinho">
           <div class="row">
@@ -52,11 +54,41 @@
             </div>
         
           </div>
-  
-   
         </div>
         <p class="text-uppercase totalCarrinho">Valor total R$ {{totalValorCarrinho}}</p>
       </div>
+      
+    -->
+
+      <!--CARRINHO-Teste-->
+
+      <div class="lista-de-compras">
+        <div class="row d-flex justify-content-center">
+          <p class="text-uppercase">Lista de compras <i class="fa fa-shopping-cart" aria-hidden="true"></i></p>
+        </div>
+        <div class="row menu-lista ">
+          <div class="col-md-4"><p class="text-left font-weight-bold ">Itens</p></div>
+          <div class="col-md-4"><p class="text-center font-weight-bold">Quantidade</p></div>
+          <div class="col-md-4"><p class="text-right font-weight-bold">Preço Unitário</p></div>
+        </div>
+        <div class="row cesta" *ngFor='let item of totalCompras'>
+          <div class="col-md-4">
+            
+            <p class="text-uppercase font-weight-bold nome text-left pb-0 mt-2">{{item.titulo}}</p>
+          </div>
+          <div class="col-md-4">
+            
+            <p class="text-uppercase font-weight-bold qtd text-center pb-0">Un. {{item.quantidade}}</p>
+          </div>
+          <div class="col-md-4">
+            
+            <p class="text-uppercase font-weight-bold precoUn text-right pb-0">R$ {{item.preco}}</p>
+          </div>
+        </div>
+        <p class="text-uppercase totalCarrinho text-rigth">Valor total R$ {{totalValorCarrinho}}</p>
+      </div>
+      <!--/CARRINHO-Teste-->
+
 
       <div class="row mb-5">
         <div class="col-md-12">

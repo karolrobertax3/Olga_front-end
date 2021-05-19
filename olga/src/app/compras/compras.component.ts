@@ -12,7 +12,8 @@ interface itemCarrinho {
   quantidade: number;
   titulo: string;
   preco: number;
-  precoTotal: number
+  precoTotal: number;
+  //fotoProduto: string;
 }
 
 @Component({
