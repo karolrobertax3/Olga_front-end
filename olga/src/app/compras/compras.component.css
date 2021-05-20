@@ -58,6 +58,7 @@
 .container-compra input{
     width: 80px;
     height: 40px;
+    border-right: none;
     border-top-right-radius: none;
     border-bottom-right-radius: none;
     border-top-left-radius: 10px;
@@ -68,6 +69,8 @@
 
 .container-compra input:focus {
     border: solid 1px #178A41;
+    border-top-right-radius: none;
+    border-bottom-right-radius: none;
     border-right: none;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
@@ -108,8 +111,8 @@
 
 
 .preco{
-    width: 55px;
-    height: 55px;
+    width: 57px;
+    height: 57px;
     background-color: #178A41;
     color: white;
     border-radius: 50%;
@@ -120,10 +123,12 @@
 }
 
 .preco span{
-    margin-right: 5px;
-    margin-top: 8px;
+    margin-right: -3.5px;
+    margin-top: 9px;
     font-size: 9pt;
     float: right;
+    padding: 0;
+    padding-right: 4px;
 }
 
 .text-uppercase{
